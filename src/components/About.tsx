@@ -54,7 +54,7 @@ export const About = () => {
               {stats.map((stat, index) => (
                 <div
                   key={stat.label}
-                  className="bg-gray-900 p-6 rounded-xl border border-gray-800 text-center hover:border-gray-700 transition-all duration-300 hover:transform hover:scale-105"
+                  className="backdrop-blur-md bg-white/5 p-6 rounded-xl border border-white/10 text-center hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105 hover:bg-white/10"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <stat.icon className="text-white" size={24} />
@@ -65,7 +65,7 @@ export const About = () => {
               ))}
             </div>
 
-            <div className="bg-gray-900 p-8 rounded-xl border border-gray-800">
+            <div className="backdrop-blur-md bg-white/5 p-8 rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300">
               <h3 className="text-xl font-semibold text-white mb-4">Core Values</h3>
               <ul className="space-y-3 text-gray-400">
                 <li className="flex items-center gap-3">

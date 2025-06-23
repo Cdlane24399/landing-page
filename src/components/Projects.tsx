@@ -39,7 +39,7 @@ const projects = [
 
 export const Projects = () => {
   return (
-    <section id="projects" className="py-20 px-4 bg-gray-950">
+    <section id="projects" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -54,7 +54,7 @@ export const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className={`group relative bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all duration-500 hover:transform hover:scale-[1.02] ${
+              className={`group relative backdrop-blur-md bg-white/5 rounded-xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-500 hover:transform hover:scale-[1.02] hover:bg-white/10 ${
                 project.featured ? 'lg:col-span-2' : ''
               }`}
             >
@@ -64,7 +64,7 @@ export const Projects = () => {
                   alt={project.title}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               </div>
 
               <div className="p-8">
@@ -80,7 +80,7 @@ export const Projects = () => {
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-gray-800 text-blue-400 text-sm rounded-full border border-gray-700"
+                      className="px-3 py-1 backdrop-blur-sm bg-white/10 text-blue-400 text-sm rounded-full border border-white/20"
                     >
                       {tech}
                     </span>

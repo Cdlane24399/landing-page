@@ -57,10 +57,10 @@ export const Skills = () => {
           {skillCategories.map((category, index) => (
             <div
               key={category.title}
-              className="group relative bg-gray-900 p-8 rounded-xl border border-gray-800 hover:border-gray-700 transition-all duration-300 hover:transform hover:scale-105"
+              className="group relative backdrop-blur-md bg-white/5 p-8 rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105 hover:bg-white/10"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className={`absolute inset-0 bg-gradient-to-r ${category.color} opacity-0 group-hover:opacity-10 rounded-xl transition-opacity duration-300`} />
+              <div className={`absolute inset-0 bg-gradient-to-r ${category.color} opacity-0 group-hover:opacity-5 rounded-xl transition-opacity duration-300`} />
               
               <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 <category.icon className="text-white" size={24} />
@@ -74,7 +74,7 @@ export const Skills = () => {
                 {category.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-700 group-hover:border-gray-600 group-hover:text-white transition-all duration-300"
+                    className="px-3 py-1 backdrop-blur-sm bg-white/10 text-gray-300 text-sm rounded-full border border-white/20 group-hover:border-white/30 group-hover:text-white transition-all duration-300"
                   >
                     {skill}
                   </span>
