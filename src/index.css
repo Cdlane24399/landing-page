@@ -117,6 +117,8 @@
     /* Ensure no white space appears anywhere */
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    /* Force dark color scheme for browser chrome */
+    color-scheme: dark;
   }
 
   body {
@@ -127,11 +129,15 @@
     background-attachment: fixed;
     /* Ensure body takes full height */
     min-height: 100vh;
-    /* Prevent bounce scrolling on iOS */
+    /* Prevent bounce scrolling on iOS and ensure dark overscroll */
     overscroll-behavior: none;
+    overscroll-behavior-y: none;
+    overscroll-behavior-x: none;
     /* Remove default margins and padding */
     margin: 0;
     padding: 0;
+    /* Force browser chrome to match background */
+    color-scheme: dark;
   }
 
   /* Additional fix for iOS Safari over-scroll */
