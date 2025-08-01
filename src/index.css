@@ -96,28 +96,54 @@
   * {
     @apply border-border;
   }
+  
+  /* Reset all margins and padding */
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
   html {
-    @apply bg-gradient-to-br from-gray-900 via-black to-gray-900;
+    /* Set a solid fallback color first */
+    background-color: #111827;
+    /* Then apply the gradient on top */
+    background-image: linear-gradient(to bottom right, #111827, #000000, #111827);
     /* Prevent white background on over-scroll */
     background-attachment: fixed;
     /* Ensure background covers entire viewport and beyond */
     min-height: 100%;
     height: 100%;
+    /* Ensure no white space appears anywhere */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
   }
 
   body {
-    @apply bg-transparent text-foreground;
-    /* Ensure body takes full height and has the same background */
+    @apply text-foreground;
+    /* Use the same background as html */
+    background-color: #111827;
+    background-image: linear-gradient(to bottom right, #111827, #000000, #111827);
+    background-attachment: fixed;
+    /* Ensure body takes full height */
     min-height: 100vh;
-    background: inherit;
     /* Prevent bounce scrolling on iOS */
     overscroll-behavior: none;
+    /* Remove default margins and padding */
+    margin: 0;
+    padding: 0;
   }
 
   /* Additional fix for iOS Safari over-scroll */
   #root {
     min-height: 100vh;
-    background: inherit;
+    background-color: #111827;
+    background-image: linear-gradient(to bottom right, #111827, #000000, #111827);
+    background-attachment: fixed;
+  }
+
+  /* Ensure all sections have transparent background to show parent */
+  section {
+    background: transparent;
   }
 }
